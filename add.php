@@ -20,14 +20,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Add Hours | Timesheet</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav>
+        <a href="index.php">View Entries</a>
+        <a href="client-summary.php">Client Summary</a>
         <a href="add.php">Input Hours</a>
-        <a href="#">Change Hourly Rate</a>
-        <a href="index.php">View Timesheet</a>
+        <a href="enter-hourly-rate.php">Change Hourly Rate</a>
     </nav>
    <h1>Add work</h1>
    <form action="insert-entry.php" method="POST">
@@ -42,9 +43,9 @@
         ?>
         </select>
         <label for="hoursworked">Hours Worked</label>
-        <input required step="0.15" name="hoursworked" id="hoursworked" type="number">
+        <input placeholder="Enter Hours Worked (15 Min Increments)" step="0.15" name="hoursworked" id="hoursworked" type="number">
         <label for="desc">Description</label>
-        <textarea type="text" name="desc" id="desc"></textarea>
+        <textarea placeholder="Enter Work Description" type="text" name="desc" id="desc"></textarea>
         <input type="submit" value="Submit Hours">
    </form> 
 </body>

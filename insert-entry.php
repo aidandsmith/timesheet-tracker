@@ -16,9 +16,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Adding Entry... | Timesheet</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav>
+        <a href="index.php">View Entries</a>
+        <a href="client-summary.php">Client Summary</a>
+        <a href="add.php">Input Hours</a>
+        <a href="enter-hourly-rate.php">Change Hourly Rate</a>
+    </nav>
     <?php
         $date = mysqli_real_escape_string($connection, $_POST['date']);
         $client = mysqli_real_escape_string($connection, $_POST['client']);
@@ -30,9 +37,9 @@
         $sql = mysqli_query($connection,$query);
 
         if($sql){
-            echo "<p>Your hours have sucessfully been added to the time sheet.</p>";
+            echo "<h1>Your hours have sucessfully been added to the time sheet.</h1>";
         }else{
-            echo "<p>Your hours were not sucessfully added. Please try again.</p>";
+            echo "<h1>Your hours were not sucessfully added. Please try again.</h1>";
             echo mysqli_error($connection);
         }
     ?>

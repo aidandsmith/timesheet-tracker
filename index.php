@@ -1,8 +1,8 @@
 <?php  
     $server = "localhost";
-    $username = "manager";
-    $password = "123456";
-    $db = "timetracker";
+    $username = "asmith_manager";
+    $password = "Z)q6iFMaWO}?";
+    $db = "asmith_timetracker";
 
     $connection = mysqli_connect($server,$username,$password,$db);
 
@@ -52,6 +52,7 @@
                     <th>Client</th>
                     <th>Hours Worked</th>
                     <th>Description</th>
+                    <th>Cost for Work</th>
                 </tr>
               </thead>';
         echo '<tbody>';
@@ -62,6 +63,7 @@
             echo '<td>'.$row['client'].'</td>';
             echo '<td>'.$row['hoursWorked'].'</td>';
             echo '<td>'.$row['description'].'</td>';
+            echo '<td>$'.$row['hoursWorked']*$hourlyRate.'</td>';
             echo '</tr>';
         }
 

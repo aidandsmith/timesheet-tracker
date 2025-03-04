@@ -1,8 +1,8 @@
 <?php  
     $server = "localhost";
-    $username = "asmith_manager";
-    $password = "Z)q6iFMaWO}?";
-    $db = "asmith_timetracker";
+    $username = "manager";
+    $password = "123456";
+    $db = "timetracker";
 
     $connection = mysqli_connect($server,$username,$password,$db);
 
